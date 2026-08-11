@@ -1,0 +1,74 @@
+[
+    {
+        "id": "c_canvas_01",
+        "categoria": "Estrategia",
+        "titulo": "Business Model Canvas",
+        "descripcion": "Aprende a estructurar tu modelo de negocio bloque por bloque de forma visual y práctica.",
+        "nivel": "Básico",
+        "tiempo_restante": "0 min",
+        "progreso_porcentaje": 100,
+        "estado": "Completado",
+        "icono": "bi-grid-1x2",
+        "color_icono": "text-success"
+    },
+    {
+        "id": "c_finanzas_02",
+        "categoria": "Finanzas",
+        "titulo": "Flujo de Caja Pyme",
+        "descripcion": "Controla los ingresos y egresos de tu emprendimiento para asegurar la rentabilidad a largo plazo.",
+        "nivel": "Intermedio",
+        "tiempo_restante": "1h 20 min",
+        "progreso_porcentaje": 60,
+        "estado": "En progreso",
+        "icono": "bi-cash-coin",
+        "color_icono": "text-primary"
+    },
+    {
+        "id": "c_web_03",
+        "categoria": "Tecnología",
+        "titulo": "Desarrollo Web para Negocios",
+        "descripcion": "Crea la landing page de tu emprendimiento utilizando HTML5, CSS3 y Vanilla JavaScript sin dependencias.",
+        "nivel": "Intermedio",
+        "tiempo_restante": "2h 30 min",
+        "progreso_porcentaje": 15,
+        "estado": "En progreso",
+        "icono": "bi-code-slash",
+        "color_icono": "text-purple"
+    },
+    {
+        "id": "c_python_04",
+        "categoria": "Automatización",
+        "titulo": "Optimización con Python",
+        "descripcion": "Aprende a crear scripts backend para automatizar la gestión de tu inventario y el procesamiento de ventas.",
+        "nivel": "Avanzado",
+        "tiempo_restante": "4h 00 min",
+        "progreso_porcentaje": 0,
+        "estado": "No iniciado",
+        "icono": "bi-terminal",
+        "color_icono": "text-info"
+    },
+    {
+        "id": "c_ventas_05",
+        "categoria": "Ventas",
+        "titulo": "Estrategias de Pricing",
+        "descripcion": "Define correctamente el margen de ganancia y el precio de venta final de tus productos y servicios.",
+        "nivel": "Básico",
+        "tiempo_restante": "50 min",
+        "progreso_porcentaje": 0,
+        "estado": "No iniciado",
+        "icono": "bi-tags",
+        "color_icono": "text-warning"
+    },
+    {
+        "id": "c_iot_06",
+        "categoria": "Innovación",
+        "titulo": "Introducción a IoT en Retail",
+        "descripcion": "Conceptos básicos para sincronizar cámaras e inventario físico mediante el panel de control inteligente.",
+        "nivel": "Avanzado",
+        "tiempo_restante": "3h 15 min",
+        "progreso_porcentaje": 0,
+        "estado": "No iniciado",
+        "icono": "bi-cpu",
+        "color_icono": "text-danger"
+    }
+]

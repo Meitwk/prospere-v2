@@ -1,0 +1,143 @@
+{
+    "usuario": {
+        "nombre": "Vicente",
+        "emprendimiento": "EcoTech Chile",
+        "nivel": 7,
+        "rango": "Nivel Emprendedor",
+        "xp_actual": 1250,
+        "xp_maximo": 2000
+    },
+    "rendimiento_hoy": {
+        "ganancia_dia": 45500,
+        "estado": "Óptimo",
+        "ventas_hoy": 145000,
+        "pedidos": 12,
+        "clientes": 28,
+        "grafico_tendencia": [
+            10,
+            15,
+            12,
+            22,
+            28,
+            25,
+            35,
+            45
+        ]
+    },
+    "indicadores_clave": {
+        "ganancia_mes": {
+            "valor": 1245000,
+            "tendencia_porcentaje": 18,
+            "es_positivo": true
+        },
+        "productos": {
+            "valor": 24,
+            "tendencia_porcentaje": 12,
+            "es_positivo": true
+        },
+        "cursos": {
+            "completados": 6,
+            "total": 12,
+            "tendencia_porcentaje": 50,
+            "es_positivo": true
+        },
+        "progreso_total": {
+            "valor": 68,
+            "tendencia_porcentaje": 15,
+            "es_positivo": true
+        }
+    },
+    "continuar_aprendiendo": [
+        {
+            "id": "curso_canvas_01",
+            "categoria": "Canvas",
+            "titulo": "Propuesta de Valor",
+            "estado_texto": "Desplegable • Listo para ver",
+            "progreso_porcentaje": 75,
+            "icono": "bi-journal-text"
+        },
+        {
+            "id": "curso_finanzas_02",
+            "categoria": "Finanzas",
+            "titulo": "Flujo de Caja Pyme",
+            "estado_texto": "Desplegable • Listo para ver",
+            "progreso_porcentaje": 60,
+            "icono": "bi-cash-coin"
+        }
+    ],
+    "accesos_rapidos": [
+        {
+            "id": "canvas",
+            "nombre": "Canvas",
+            "icono": "bi-grid-1x2",
+            "color_clase": "text-success"
+        },
+        {
+            "id": "finanzas",
+            "nombre": "Finanzas",
+            "icono": "bi-calculator",
+            "color_clase": "text-primary"
+        },
+        {
+            "id": "inventario",
+            "nombre": "Inventario",
+            "icono": "bi-box-seam",
+            "color_clase": "text-warning"
+        },
+        {
+            "id": "smartscan",
+            "nombre": "Smart Scan",
+            "icono": "bi-camera",
+            "color_clase": "text-success"
+        },
+        {
+            "id": "catalogo",
+            "nombre": "Catálogo",
+            "icono": "bi-bag",
+            "color_clase": "text-purple"
+        },
+        {
+            "id": "ia",
+            "nombre": "IA Asistente",
+            "icono": "bi-robot",
+            "color_clase": "text-info"
+        }
+    ],
+    "logros": [
+        {
+            "id": "l_venta",
+            "titulo": "Primer Venta",
+            "estado": "Completado",
+            "icono_clase": "bi-patch-check-fill",
+            "color": "success"
+        },
+        {
+            "id": "l_cursos",
+            "titulo": "5 Cursos",
+            "estado": "Completado",
+            "icono_clase": "bi-patch-check-fill",
+            "color": "primary"
+        },
+        {
+            "id": "l_producto",
+            "titulo": "Producto Activo",
+            "estado": "Completado",
+            "icono_clase": "bi-patch-check-fill",
+            "color": "warning"
+        },
+        {
+            "id": "l_canvas",
+            "titulo": "Canvas 100%",
+            "estado": "En progreso",
+            "icono_clase": "bi-hourglass-split",
+            "color": "secondary"
+        },
+        {
+            "id": "l_ia",
+            "titulo": "IA Experto",
+            "estado": "En progreso",
+            "icono_clase": "bi-hourglass-split",
+            "color": "info"
+        }
+    ]
+}

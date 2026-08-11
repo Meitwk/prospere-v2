@@ -1,0 +1,46 @@
+{
+    "datos_personales": {
+        "nombre_completo": "Vicente Valdebenito",
+        "rol": "Junior Fullstack Developer & Docente EMTP",
+        "email": "contacto@prospere.app",
+        "ubicacion": "San Ramón, Chile",
+        "biografia": "Desarrollador enfocado en innovación educativa y soluciones SaaS. Creador de la plataforma VoluntaMe y apasionado por la automatización con Python."
+    },
+    "estadisticas": {
+        "proyectos_activos": 3,
+        "horas_aprendizaje": 124,
+        "alumnos_impactados": 45
+    },
+    "ajustes": {
+        "tema_oscuro": false,
+        "notificaciones_email": true,
+        "alertas_stock": true,
+        "idioma": "es-CL"
+    },
+    "notificaciones": [
+        {
+            "id": 1,
+            "tipo": "success",
+            "icono": "bi-check-circle",
+            "titulo": "Proyecto guardado",
+            "mensaje": "Tu modelo Canvas se ha sincronizado correctamente.",
+            "tiempo": "Hace 5 min"
+        },
+        {
+            "id": 2,
+            "tipo": "warning",
+            "icono": "bi-bell",
+            "titulo": "Recordatorio de evento",
+            "mensaje": "Recuerda revisar la planificación y avances de la Gala de 4°C.",
+            "tiempo": "Hace 2 horas"
+        },
+        {
+            "id": 3,
+            "tipo": "primary",
+            "icono": "bi-award",
+            "titulo": "¡Nuevo logro desbloqueado!",
+            "mensaje": "Has completado la configuración inicial del servidor.",
+            "tiempo": "Ayer"
+        }
+    ]
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>PROSPERE - Gestión Inteligente</title>
+    <meta name="description" content="Plataforma moderna de apoyo al emprendimiento.">
+    <meta name="theme-color" content="#f8fafc">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Estilos Personalizados -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="bg-light-custom">
+
+    <div class="app-layout">
+        <!-- NAVEGACIÓN PRINCIPAL (Responsive: Bottom-bar en móvil, Sidebar en Desktop) -->
+        <nav class="app-nav shadow-sm" aria-label="Navegación principal">
+
+            <!-- Branding (Visible solo en escritorio) -->
+            <div class="nav-brand d-none d-md-flex align-items-center mb-4 px-3 pt-3">
+                <span class="fs-3 text-success fw-bold me-2">
+                    <i class="bi bi-layers-fill"></i>
+                </span>
+                <h1 class="h4 text-success fw-bold mb-0">Prospere</h1>
+            </div>
+
+            <!-- Enlaces de navegación -->
+            <ul class="nav-links list-unstyled d-flex flex-md-column justify-content-around w-100 m-0 p-0">
+                <li class="nav-item">
+                    <button class="nav-btn active d-flex flex-column flex-md-row align-items-center w-100"
+                        data-view="dashboard" aria-label="Ir al Inicio">
+                        <i class="bi bi-house-door fs-4 mb-1 mb-md-0 me-md-3"></i>
+                        <span class="nav-text fs-7 fw-medium">Inicio</span>
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-btn d-flex flex-column flex-md-row align-items-center w-100" data-view="academy"
+                        aria-label="Ir a Clases">
+                        <i class="bi bi-book fs-4 mb-1 mb-md-0 me-md-3"></i>
+                        <span class="nav-text fs-7 fw-medium">Clases</span>
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-btn d-flex flex-column flex-md-row align-items-center w-100" data-view="ai"
+                        aria-label="Abrir asistente IA">
+                        <i class="bi bi-robot fs-4 mb-1 mb-md-0 me-md-3"></i>
+                        <span class="nav-text fs-7 fw-medium">IA</span>
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-btn d-flex flex-column flex-md-row align-items-center w-100" data-view="panel"
+                        aria-label="Ir al Panel de control">
+                        <i class="bi bi-bar-chart-line fs-4 mb-1 mb-md-0 me-md-3"></i>
+                        <span class="nav-text fs-7 fw-medium">Panel</span>
+                    </button>
+                </li>
+            </ul>
+
+            <!-- Acciones secundarias (Solo escritorio) -->
+            <div class="nav-footer d-none d-md-block mt-auto px-3 pb-4">
+                <button id="btn-sidebar-ajustes"
+                    class="btn btn-outline-secondary w-100 d-flex align-items-center justify-content-center text-muted border-0 shadow-none"
+                    aria-label="Configuración">
+                    <i class="bi bi-gear me-2"></i> Ajustes
+                </button>
+            </div>
+        </nav>
+
+        <!-- CONTENEDOR PRINCIPAL DINÁMICO -->
+        <main class="app-content pb-5 pb-md-0">
+            <!-- Header Global (Notificaciones y Perfil) -->
+            <header
+                class="d-flex justify-content-between align-items-center p-3 p-md-4 bg-white sticky-top shadow-sm z-index-1">
+                <div class="d-md-none">
+                    <h2 class="h5 text-success fw-bold mb-0">Prospere</h2>
+                </div>
+                <div class="d-none d-md-block">
+                    <!-- Espacio para breadcrumbs o título de sección dinámico si se requiere -->
+                </div>
+                <div class="user-actions d-flex align-items-center gap-3">
+                    <button class="btn btn-link text-dark p-0 position-relative" aria-label="Notificaciones">
+                        <i class="bi bi-bell fs-5"></i>
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+                            <span class="visually-hidden">Nuevas alertas</span>
+                        </span>
+                    </button>
+                    <button class="btn btn-light rounded-pill px-3 py-1 border d-flex align-items-center gap-2"
+                        id="profile-btn" aria-label="Perfil del usuario">
+                        <span class="text-success fw-bold">•</span>
+                        <span class="fw-medium" id="user-name-display">Cargando...</span>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Zona de Inyección de Vistas (Aquí JS pintará el Dashboard, Academia, etc.) -->
+            <div id="view-container" class="container-fluid p-3 p-md-4 fade-in">
+                <!-- Skeleton Loader (Estado inicial de carga) -->
+                <div class="text-center py-5 text-muted">
+                    <div class="spinner-border text-success" role="status">
+                        <span class="visually-hidden">Cargando aplicación...</span>
+                    </div>
+                    <p class="mt-3">Iniciando entorno...</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modales Globales (Inyectados dinámicamente o pre-construidos para SmartScan / Chatbot / Canvas) -->
+    <div id="modal-container"></div>
+
+    <!-- Bootstrap 5 Bundle con Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <!-- Script Principal (Módulo) -->
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
