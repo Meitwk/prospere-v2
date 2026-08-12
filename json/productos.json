@@ -107,7 +107,7 @@
     "stock": 40,
     "estado": "Disponible",
     "descripcion": "Adaptador de pared y cable reforzado con soporte para transmisión de datos de alta velocidad y protocolo de carga rápida de hasta 20W.",
-    "imagen": "https://via.placeholder.com/300x200/f1f5f9/1e293b?text=Conector+Celular"
+    "imagen": "image/cargador.png"
     },
     {
     "id": "prod_luces_12",
@@ -117,6 +117,6 @@
     "stock": 10,
     "estado": "Disponible",
     "descripcion": "Paneles LED modulares táctiles con sincronización de efectos RGB. Permite crear patrones geométricos personalizados para la pared de tu setup.",
-    "imagen": "https://via.placeholder.com/300x200/f1f5f9/1e293b?text=Luces+Gamer+Pared"
+    "imagen": "image/luces.png"
     }
 ]
