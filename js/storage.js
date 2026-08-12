@@ -20,7 +20,6 @@ export const AppStorage = {
                     { key: 'dashboard', path: 'json/dashboard.json' },
                     { key: 'cursos', path: 'json/cursos.json' },
                     { key: 'productos', path: 'json/productos.json' },
-                    { key: 'canvas', path: 'json/canvas.json' }
                 ];
 
                 // Cargamos todos los archivos secuencialmente

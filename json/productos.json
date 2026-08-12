@@ -1,65 +1,122 @@
 [
     {
-        "id": "prod_hw_01",
-        "nombre": "Impresora de Resina 3D",
-        "categoria": "Equipamiento",
-        "precio": 285000,
-        "stock": 3,
-        "estado": "Disponible",
-        "imagen": "https://via.placeholder.com/300x200/f1f5f9/1e293b?text=Impresora+3D"
+    "id": "prod_piano_01",
+    "nombre": "Teclado Piano Digital de 61 Teclas",
+    "categoria": "Instrumentos Musicales",
+    "precio": 45990,
+    "stock": 8,
+    "estado": "Disponible",
+    "descripcion": "Teclado musical portátil ideal para principiantes y nivel intermedio. Incluye diferentes ritmos, tonos integrados y entrada para pedal de sostenido.",
+    "imagen": "image/Piano.png"
     },
     {
-        "id": "prod_ins_02",
-        "nombre": "Resma Papel Opalina Especial",
-        "categoria": "Insumos",
-        "precio": 8500,
-        "stock": 45,
-        "estado": "Disponible",
-        "imagen": "https://via.placeholder.com/300x200/f1f5f9/1e293b?text=Papel+Opalina"
+    "id": "prod_lapices_02",
+    "nombre": "Set de Lápices de Colores Profesionales (48 Piezas)",
+    "categoria": "Librería y Arte",
+    "precio": 12990,
+    "stock": 25,
+    "estado": "Disponible",
+    "descripcion": "Estuche completo con minas de alta pigmentación y gran suavidad al trazar. Perfecto para ilustración, dibujo técnico y coloreado de precisión.",
+    "imagen": "image/Lapices.png"
     },
     {
-        "id": "prod_aud_03",
-        "nombre": "Pedalera Mooer GE300",
-        "categoria": "Audio Profesional",
-        "precio": 650000,
-        "stock": 1,
-        "estado": "Stock Crítico",
-        "imagen": "https://via.placeholder.com/300x200/f1f5f9/1e293b?text=Mooer+GE300"
+    "id": "prod_pusheen_03",
+    "nombre": "Peluche de Pusheen Original 25cm",
+    "categoria": "Peluches y Coleccionables",
+    "precio": 18990,
+    "stock": 12,
+    "estado": "Disponible",
+    "descripcion": "Peluche ultrasuave de colección con costuras reforzadas. El regalo ideal para fanáticos de la icónica gatita de internet.",
+    "imagen": "image/pusheen.png"
     },
     {
-        "id": "prod_ins_04",
-        "nombre": "Tóner Compatible Brother HL",
-        "categoria": "Insumos",
-        "precio": 12000,
-        "stock": 15,
-        "estado": "Disponible",
-        "imagen": "https://via.placeholder.com/300x200/f1f5f9/1e293b?text=Toner+Brother"
+    "id": "prod_cubiertos_04",
+    "nombre": "Set de Cucharas y Tenedores de Acero Inoxidable",
+    "categoria": "Hogar y Cocina",
+    "precio": 9990,
+    "stock": 30,
+    "estado": "Disponible",
+    "descripcion": "Juego elegante de cubiertos de alta durabilidad, aptos para lavavajillas y resistentes a la corrosión con acabado pulido espejo.",
+    "imagen": "image/cubiertos.png"
     },
     {
-        "id": "prod_aud_05",
-        "nombre": "Mezcladora Digital Allen & Heath",
-        "categoria": "Audio Profesional",
-        "precio": 1250000,
-        "stock": 0,
-        "estado": "Agotado",
-        "imagen": "https://via.placeholder.com/300x200/f1f5f9/1e293b?text=Mixer+Digital"
+    "id": "prod_lego_05",
+    "nombre": "Set de Figuras Coleccionables Lego",
+    "categoria": "Juguetes y Bloques",
+    "precio": 24990,
+    "stock": 15,
+    "estado": "Disponible",
+    "descripcion": "Pack de minifiguras ensamblables con piezas intercambiables y accesorios temáticos. Estimula la creatividad y construcción en niños y adultos.",
+    "imagen": "image/setlegos.png"
     },
     {
-        "id": "prod_ins_06",
-        "nombre": "Kit Vinilo Textil Termotransferible",
-        "categoria": "Insumos",
-        "precio": 25000,
-        "stock": 8,
-        "estado": "Disponible",
-        "imagen": "https://via.placeholder.com/300x200/f1f5f9/1e293b?text=Vinilo+Textil"
+    "id": "prod_limbus_06",
+    "nombre": "Peluche de Limbus Company (Mercancía Oficial)",
+    "categoria": "Peluches y Anime",
+    "precio": 22990,
+    "stock": 6,
+    "estado": "Stock Crítico",
+    "descripcion": "Mercancía original del videojuego Limbus Company. Peluche de felpa de alta densidad con detalles bordados en el traje y accesorios.",
+    "imagen": "image/limbus.png"
     },
     {
-        "id": "prod_aud_07",
-        "nombre": "Piano Digital Kawai",
-        "categoria": "Instrumentos",
-        "precio": 890000,
-        "stock": 2,
-        "estado": "Disponible",
-        "imagen": "https://via.placeholder.com/300x200/f1f5f9/1e293b?text=Piano+Kawai"
+    "id": "prod_parlante_07",
+    "nombre": "Parlante Pequeño Bluetooth Portátil",
+    "categoria": "Audio y Electrónica",
+    "precio": 15990,
+    "stock": 20,
+    "estado": "Disponible",
+    "descripcion": "Altavoz de tamaño compacto con graves potentes, batería de hasta 8 horas de reproducción continua y resistencia al agua IPX5.",
+    "imagen": "image/parlante.png"
+    },
+    {
+    "id": "prod_audifonos_08",
+    "nombre": "Audífonos Inalámbricos Bluetooth TWS",
+    "categoria": "Audio y Electrónica",
+    "precio": 29990,
+    "stock": 18,
+    "estado": "Disponible",
+    "descripcion": "Audífonos True Wireless con cancelación pasiva de ruido, estuche de carga inteligente y controles táctiles para llamadas y música.",
+    "imagen": "image/audifonos.png"
+    },
+    {
+    "id": "prod_jjba_09",
+    "nombre": "Peluche Coleccionable JoJo's Bizarre Adventure (JJBA)",
+    "categoria": "Peluches y Anime",
+    "precio": 21990,
+    "stock": 7,
+    "estado": "Disponible",
+    "descripcion": "Peluche de felpa detallado con los trajes icónicos de la saga JoJo's Bizarre Adventure. Ideal para fanáticos y coleccionistas del anime.",
+    "imagen": "image/jojos.png"
+    },
+    {
+    "id": "prod_juegos_armar_10",
+    "nombre": "Juegos de Armar 3D de Madera/Plástico",
+    "categoria": "Juguetes y Pasatiempos",
+    "precio": 16990,
+    "stock": 14,
+    "estado": "Disponible",
+    "descripcion": "Maqueta tridimensional para ensamblar sin necesidad de pegamento. Desarrolla la paciencia, la motricidad fina y el pensamiento espacial.",
+    "imagen": "image/juegos.png"
+    },
+    {
+    "id": "prod_conector_11",
+    "nombre": "Conector y Carga Rápida USB-C para Celular",
+    "categoria": "Accesorios de Celular",
+    "precio": 7990,
+    "stock": 40,
+    "estado": "Disponible",
+    "descripcion": "Adaptador de pared y cable reforzado con soporte para transmisión de datos de alta velocidad y protocolo de carga rápida de hasta 20W.",
+    "imagen": "https://via.placeholder.com/300x200/f1f5f9/1e293b?text=Conector+Celular"
+    },
+    {
+    "id": "prod_luces_12",
+    "nombre": "Luces Gamer LED RGB Hexagonales para Pared",
+    "categoria": "Decoración Gamer",
+    "precio": 34990,
+    "stock": 10,
+    "estado": "Disponible",
+    "descripcion": "Paneles LED modulares táctiles con sincronización de efectos RGB. Permite crear patrones geométricos personalizados para la pared de tu setup.",
+    "imagen": "https://via.placeholder.com/300x200/f1f5f9/1e293b?text=Luces+Gamer+Pared"
     }
 ]

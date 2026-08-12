@@ -66,12 +66,7 @@
         }
     ],
     "accesos_rapidos": [
-        {
-            "id": "canvas",
-            "nombre": "Canvas",
-            "icono": "bi-grid-1x2",
-            "color_clase": "text-success"
-        },
+        
         {
             "id": "finanzas",
             "nombre": "Finanzas",
@@ -125,13 +120,7 @@
             "icono_clase": "bi-patch-check-fill",
             "color": "warning"
         },
-        {
-            "id": "l_canvas",
-            "titulo": "Canvas 100%",
-            "estado": "En progreso",
-            "icono_clase": "bi-hourglass-split",
-            "color": "secondary"
-        },
+        
         {
             "id": "l_ia",
             "titulo": "IA Experto",

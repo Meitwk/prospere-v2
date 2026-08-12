@@ -56,21 +56,23 @@ export const Dashboard = {
                 </div>
             </div>
 
-            <!-- Banner IA (Ahora interactivo) -->
+            <!-- Banner IA -->
             <div class="ai-banner mb-4 fade-in pro-card-interactive" id="btn-quick-ai">
                 <div>
                     <h3 class="h5 mb-1"><i class="bi bi-stars me-2"></i>¿Tienes una duda rápida?</h3>
-                    <p class="mb-0 fs-7 opacity-75">Pregúntale a tu mentor IA sobre impuestos, precios o Canvas.</p>
+                    <p class="mb-0 fs-7 opacity-75">Pregúntale a tu mentor IA sobre impuestos, precios o estrategias.</p>
                 </div>
                 <button class="btn btn-light rounded-pill px-3 py-2 text-success fw-bold d-none d-sm-block">
                     <i class="bi bi-chat-dots me-2"></i> Preguntar ahora
                 </button>
             </div>
 
-            <!-- Accesos Rápidos -->
+            <!-- Accesos Rápidos (Filtrado sin Canvas) -->
             <h4 class="h6 fw-bold mb-3 fade-in">Accesos Rápidos</h4>
             <div class="quick-access-grid mb-4 fade-in">
-                ${data.accesos_rapidos.map(item => `
+                ${data.accesos_rapidos
+                    .filter(item => item.id !== 'canvas')
+                    .map(item => `
                     <button class="quick-btn" data-view="${item.id}">
                         <div class="quick-icon-wrapper">
                             <i class="bi ${item.icono} ${item.color_clase}"></i>
@@ -90,13 +92,12 @@ export const Dashboard = {
         const btnQuickAi = document.getElementById('btn-quick-ai');
         if (btnQuickAi) {
             btnQuickAi.addEventListener('click', () => {
-                // Buscamos el botón "IA" en la barra de navegación y forzamos el clic
                 const navAiBtn = document.querySelector('.nav-btn[data-view="ai"]');
                 if (navAiBtn) navAiBtn.click();
             });
         }
 
-        // 2. Clic en los botones de "Accesos Rápidos" (Canvas, Inventario, etc.)
+        // 2. Clic en los botones de "Accesos Rápidos"
         const quickBtns = document.querySelectorAll('.quick-btn');
         quickBtns.forEach(btn => {
             btn.addEventListener('click', (e) => {
