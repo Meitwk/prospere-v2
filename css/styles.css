@@ -10,12 +10,12 @@
     --brand-green-dark: #059669;   /* Verde para textos y hovers */
     --brand-green-light: #D1FAE5;  /* Verde muy suave para fondos de badges */
     
-    /* Neutros y Fondos */
-    --bg-app: #F8FAFC;             /* Fondo gris casi blanco de la app */
-    --bg-card: #FFFFFF;            /* Blanco puro para tarjetas */
-    --text-main: #1E293B;          /* Texto principal (Casi negro) */
-    --text-muted: #64748B;         /* Texto secundario (Gris azulado) */
-    --border-color: #F1F5F9;       /* Bordes muy sutiles */
+/* Neutros y Fondos (Versión con intensidad ajustada para monitor) */
+    --bg-app: #E2E8F0;             /* Fondo gris/azulado con verdadero contraste */
+    --bg-card: #FFFFFF;            /* Tarjetas blanco puro destacadas */
+    --text-main: #0F172A;          /* Texto principal más marcado (antes #1E293B) */
+    --text-muted: #475569;         /* Texto e íconos inactivos con más cuerpo (antes #64748B) */
+    --border-color: #CBD5E1;       /* Bordes definidos pero finos (antes #F1F5F9) */
     
     /* Tipografía */
     --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -630,4 +630,285 @@ body {
     max-height: 320px;
     object-fit: cover;
     border-radius: var(--radius-md);
+}
+
+/* ==========================================================================
+10. SISTEMA DE PERSONALIZACIÓN DE TEMA Y ACENTOS
+   ========================================================================== */
+
+/* --- Colores de Acento Predefinidos --- */
+body[data-color="emerald"] {
+    --brand-green: #10B981;
+    --brand-green-dark: #059669;
+    --brand-green-light: #D1FAE5;
+}
+
+body[data-color="ocean"],
+body[data-color="blue"] {
+    --brand-green: #3b82f6;
+    --brand-green-dark: #2563eb;
+    --brand-green-light: #dbeafe;
+}
+
+body[data-color="purple"],
+body[data-color="violet"] {
+    --brand-green: #8b5cf6;
+    --brand-green-dark: #7c3aed;
+    --brand-green-light: #ede9fe;
+}
+
+body[data-color="sunset"],
+body[data-color="amber"] {
+    --brand-green: #f59e0b;
+    --brand-green-dark: #d97706;
+    --brand-green-light: #fef3c7;
+}
+
+/* --- Soporte para Color Personalizado (Rueda de Color) --- */
+body[data-color="custom"] {
+    --brand-green: var(--primary-color, #10B981);
+    --brand-green-dark: var(--primary-color, #059669);
+    --brand-green-light: rgba(16, 185, 129, 0.15);
+}
+
+/* --- Modo Oscuro Global --- */
+body[data-theme="dark"] {
+    --bg-app: #0b1329;
+    --bg-card: #1e293b;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --border-color: #334155;
+    background-color: var(--bg-app) !important;
+    color: var(--text-main) !important;
+}
+
+/* Header superior y contenedores blancos */
+body[data-theme="dark"] header,
+body[data-theme="dark"] .navbar,
+body[data-theme="dark"] .top-bar,
+body[data-theme="dark"] [class*="bg-white"] {
+    background-color: var(--bg-card) !important;
+    color: var(--text-main) !important;
+    border-color: var(--border-color) !important;
+}
+
+/* Modales y Offcanvas */
+body[data-theme="dark"] .modal-content,
+body[data-theme="dark"] .offcanvas {
+    background-color: var(--bg-card) !important;
+    color: var(--text-main) !important;
+}
+
+/* Corrección de contrastes en textos Bootstrap */
+body[data-theme="dark"] .text-muted,
+body[data-theme="dark"] .text-secondary,
+body[data-theme="dark"] small,
+body[data-theme="dark"] p {
+    color: #94a3b8 !important;
+}
+
+body[data-theme="dark"] h1, 
+body[data-theme="dark"] h2, 
+body[data-theme="dark"] h3, 
+body[data-theme="dark"] h4, 
+body[data-theme="dark"] h5, 
+body[data-theme="dark"] h6,
+body[data-theme="dark"] .text-dark {
+    color: #ffffff !important;
+}
+
+/* Contenedores internos e inputs */
+body[data-theme="dark"] .bg-light,
+body[data-theme="dark"] .form-control,
+body[data-theme="dark"] .form-select {
+    background-color: #0f172a !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+}
+
+/* Menú lateral (Sidebar) */
+body[data-theme="dark"] .app-nav {
+    background-color: #0f172a !important;
+    border-color: var(--border-color) !important;
+}
+
+body[data-theme="dark"] .nav-btn {
+    color: #94a3b8;
+}
+
+body[data-theme="dark"] .nav-btn:hover {
+    color: #ffffff;
+    background-color: #1e293b;
+}
+
+/* --- Selector de Colores en Ajustes --- */
+.btn-color-picker {
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-color-picker:hover {
+    transform: scale(1.15);
+}
+
+.btn-color-picker.active {
+    box-shadow: 0 0 0 3px var(--bg-card), 0 0 0 5px var(--brand-green);
+}
+
+/* --- Modo Compacto --- */
+body.compact-mode .pro-card {
+    padding: 0.85rem !important;
+}
+
+body.compact-mode .catalog-grid {
+    gap: 0.75rem !important;
+}
+
+/* ==========================================================================
+   FIX DEFINITIVO PARA MODO OSCURO (Tablas, Chat Header y Píldora de Usuario)
+   ========================================================================== */
+
+body[data-theme="dark"] .chat-header {
+    background: #1e293b !important;
+    border-bottom: 1px solid #334155 !important;
+}
+
+/* Tablas, celdas y listas */
+body[data-theme="dark"] table,
+body[data-theme="dark"] thead,
+body[data-theme="dark"] tbody,
+body[data-theme="dark"] tr,
+body[data-theme="dark"] th,
+body[data-theme="dark"] td {
+    background-color: #1e293b !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+}
+
+/* Botones dentro de la tabla (más y menos stock, eliminar) */
+body[data-theme="dark"] .btn-outline-secondary,
+body[data-theme="dark"] .btn-light {
+    background-color: #0f172a !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+}
+
+/* Píldora del Usuario (Header Top-Right) */
+body[data-theme="dark"] [class*="rounded-pill"],
+body[data-theme="dark"] .badge-user {
+    background-color: #1e293b !important;
+    color: #f8fafc !important;
+    border: 1px solid #334155 !important;
+}
+
+/* ==========================================================================
+   FIX MODO OSCURO: ACADEMIA / CLASES
+   ========================================================================== */
+
+/* 1. Burbujas arriba del título (Píldoras de Categoría) */
+body[data-theme="dark"] .badge,
+body[data-theme="dark"] .pro-badge,
+body[data-theme="dark"] [class*="badge"] {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: #f8fafc !important;
+    border: 1px solid #334155 !important;
+}
+
+/* 2. Menú Lateral - Botón activo "Clases" */
+body[data-theme="dark"] .nav-btn.active {
+    background-color: rgba(16, 185, 129, 0.15) !important;
+    color: var(--brand-green) !important;
+}
+
+/* 3. Banner "No tienes cursos en progreso" */
+body[data-theme="dark"] .alert,
+body[data-theme="dark"] .bg-light,
+body[data-theme="dark"] [class*="alert"] {
+    background-color: #1e293b !important;
+    color: #94a3b8 !important;
+    border: 1px solid #334155 !important;
+}
+
+/* ==========================================================================
+   FIX MODO OSCURO: MODAL DE CLASE Y MINITAREA
+   ========================================================================== */
+
+/* 1. Fondo de la tarjeta dentro del modal (Minitarea de validación) */
+body[data-theme="dark"] .modal-body .card,
+body[data-theme="dark"] .modal-body [class*="bg-white"],
+body[data-theme="dark"] .modal-body [class*="bg-light"] {
+    background-color: #0f172a !important; /* Fondo oscuro interno contrastado */
+    border-color: #334155 !important;
+    color: #f8fafc !important;
+}
+
+/* 2. Títulos y textos dentro de la tarjeta de minitarea */
+body[data-theme="dark"] .modal-body h4,
+body[data-theme="dark"] .modal-body h5,
+body[data-theme="dark"] .modal-body h6,
+body[data-theme="dark"] .modal-body p,
+body[data-theme="dark"] .modal-body label,
+body[data-theme="dark"] .modal-body span {
+    color: #f8fafc !important;
+}
+
+/* 3. Ajuste de color secundario / subtítulos en el modal */
+body[data-theme="dark"] .modal-body .text-muted,
+body[data-theme="dark"] .modal-body .text-secondary {
+    color: #94a3b8 !important;
+}
+
+/* 4. Cajas de selección / Inputs de opciones de respuesta */
+body[data-theme="dark"] .modal-body .form-check,
+body[data-theme="dark"] .modal-body .list-group-item,
+body[data-theme="dark"] .modal-body div[class*="border"] {
+    background-color: #1e293b !important; /* Mismo fondo para los inputs */
+    border-color: #334155 !important;
+    color: #f8fafc !important;
+}
+
+/* 5. Color del texto de las opciones dentro de las cajas de respuesta */
+body[data-theme="dark"] .modal-body .form-check-label,
+body[data-theme="dark"] .modal-body input[type="radio"] + label,
+body[data-theme="dark"] .modal-body input[type="checkbox"] + label {
+    color: #f8fafc !important;
+}
+
+/* ==========================================================================
+   FIX OPCIONES DE MINITAREA (MODO OSCURO)
+   ========================================================================== */
+
+/* 1. Fondo y texto para TODAS las opciones sin seleccionar */
+body[data-theme="dark"] .modal-body label,
+body[data-theme="dark"] .modal-body .quiz-option,
+body[data-theme="dark"] .modal-body .option-card,
+body[data-theme="dark"] .modal-body [class*="option"],
+body[data-theme="dark"] .modal-body .form-check-label {
+    background-color: #1e293b !important; /* Fondo oscuro consistente */
+    color: #f8fafc !important;             /* Texto blanco legible */
+    border-color: #334155 !important;
+}
+
+/* 2. En caso de que las opciones sean contenedores/divs interactivos */
+body[data-theme="dark"] .modal-body div[style*="background"],
+body[data-theme="dark"] .modal-body label[style*="background"] {
+    background-color: #1e293b !important;
+    color: #f8fafc !important;
+}
+
+/* 3. Hover (al pasar el cursor por encima) */
+body[data-theme="dark"] .modal-body label:hover,
+body[data-theme="dark"] .modal-body .quiz-option:hover {
+    background-color: #334155 !important;
+    border-color: var(--brand-green) !important;
+    cursor: pointer;
+}
+
+/* 4. Estado Seleccionado (Marcado) */
+body[data-theme="dark"] .modal-body input[type="radio"]:checked + label,
+body[data-theme="dark"] .modal-body .active,
+body[data-theme="dark"] .modal-body .selected {
+    background-color: #1e293b !important;
+    border-color: var(--brand-green) !important;
+    color: #ffffff !important;
 }

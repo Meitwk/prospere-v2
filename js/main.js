@@ -14,13 +14,32 @@ import { FinanceModule } from './finanzas.js';
 import { Catalog } from './catalog.js';
 import { Inventory } from './inventory.js';
 
+
 document.addEventListener('DOMContentLoaded', async () => {
   const viewContainer = document.getElementById('view-container');
   const navButtons = document.querySelectorAll('.nav-btn');
   const userNameDisplay = document.getElementById('user-name-display');
 
-  // 1. Inicializar Base de Datos (Cargar JSONs a LocalStorage)
+// 1. Inicializar Base de Datos (Cargar JSONs a LocalStorage)
   await AppStorage.init();
+
+// --- RESTAURAR PREFERENCIAS DE TEMA Y APARIENCIA ---
+const savedTheme = localStorage.getItem('app-theme') || 'dark';
+  const savedColor = localStorage.getItem('app-color') || 'emerald';
+
+  document.body.setAttribute('data-theme', savedTheme);
+
+  // Si el color es un Hexadecimal (#) de la rueda de color, lo aplicamos a CSS directamente
+  if (savedColor.startsWith('#')) {
+    document.body.setAttribute('data-color', 'custom');
+    document.documentElement.style.setProperty('--primary-color', savedColor);
+  } else {
+    document.body.setAttribute('data-color', savedColor);
+  }
+
+  if (localStorage.getItem('app-compact') === 'true') {
+    document.body.classList.add('compact-mode');
+  }
 
   // 2. Actualizar Nombre de Usuario en el Header superior
   const dashData = AppStorage.getData('dashboard');
@@ -77,9 +96,11 @@ document.addEventListener('DOMContentLoaded', async () => {
           break;
 
         case 'academy':
-          viewContainer.innerHTML = Academy.render();
-          break;
+        viewContainer.innerHTML = Academy.render();
+        Academy.initEvents(); // <-- ¡ESTO HACE QUE LOS BOTONES FUNCIONEN!
+        break;
 
+case 'ia': // <-- SOLO AGREGA ESTA LÍNEA
         case 'ai':
           ChatAI.render().then(html => {
             viewContainer.innerHTML = html;
@@ -109,7 +130,10 @@ document.addEventListener('DOMContentLoaded', async () => {
           break;
 
         case 'ajustes':
-          Settings.render().then(html => viewContainer.innerHTML = html);
+          Settings.render().then(html => {
+            viewContainer.innerHTML = html;
+            Settings.initEvents(); // <-- AGREGA ESTA LÍNEA AQUÍ
+          });
           break;
 
         /* --- Módulos en Construcción --- */
@@ -178,3 +202,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   // 8. Cargar Dashboard por defecto
   loadView('dashboard');
 });
+
+
+// Ejemplo en tu app.js al cambiar de módulo o cargar el panel:
+const app = document.getElementById('app');
+app.innerHTML = ControlPanel.render();
+ControlPanel.initEvents(); // <-- ¡Llama a esta función para activar los clics de los desplegables!

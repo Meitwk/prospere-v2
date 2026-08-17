@@ -2,12 +2,12 @@
  * js/chat.js
  * Módulo del Asistente Inteligente utilizando Gemini API (Versión Fortificada)
  */
+let chatHistory = [];
 import { AppStorage } from './storage.js';
 
 // Tu API Key y el modelo correcto que soporta systemInstruction
-const GEMINI_API_KEY = 'AQ.Ab8RN6L3QtsHreAJhT_dqDL6ASSpes5KBWcGFOPpQO-fDXe0iQ';
-const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${GEMINI_API_KEY}`;
-let chatHistory = [];
+const GEMINI_API_KEY = 'AQ.Ab8RN6JTn_-KerRsfqdtkmtE_845XaawWEiHGERM5IvFQdlwig'; 
+const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${GEMINI_API_KEY}`;
 
 export const ChatAI = {
     async render() {
@@ -114,7 +114,11 @@ export const ChatAI = {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     systemInstruction: { parts: [{ text: systemPrompt }] },
-                    contents: chatHistory
+                    contents: chatHistory,
+                    generationConfig: {
+                        temperature: 0.7,
+                        maxOutputTokens: 800
+                    }
                 })
             });
 
