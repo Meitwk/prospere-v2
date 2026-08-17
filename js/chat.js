@@ -6,7 +6,6 @@ let chatHistory = [];
 import { AppStorage } from './storage.js';
 
 // Tu API Key y el modelo correcto que soporta systemInstruction
-const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${GEMINI_API_KEY}`;
 
 export const ChatAI = {
     async render() {
